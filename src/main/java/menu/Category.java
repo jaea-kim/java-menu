@@ -9,14 +9,32 @@ public enum Category {
     Asian(4, "아시안", List.of("팟타이", "카오 팟", "나시고렝", "파인애플 볶음밥", "쌀국수", "똠얌꿍", "반미", "월남쌈", "분짜")),
     Western(5, "양식", List.of("라자냐", "그라탱", "뇨끼", "끼슈", "프렌치 토스트", "바게트", "스파게티", "피자", "파니니"));
 
-    private List<String> menus;
-    private String label;
-    private int order;
+    private final List<String> menus;
+    private final String label;
+    private final int order;
 
     Category(int order, String label, List<String> menus) {
         this.order = order;
         this.label = label;
         this.menus = menus;
+    }
+
+    public static boolean isInMenus(String menu) {
+        for (Category category : Category.values()) {
+            if (category.menus.contains(menu)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static Category of(int order) {
+        for (Category category : Category.values()) {
+            if (category.order == order) {
+                return category;
+            }
+        }
+        return null;
     }
 
     public List<String> getMenus() {
