@@ -1,7 +1,10 @@
-package menu;
+package menu.domain;
 
+import menu.dto.NameDTO;
 import menu.exception.CoachDislikeMenuException;
 import menu.exception.CoachNameException;
+import menu.view.InputView;
+import menu.view.OutputView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +30,7 @@ public class CoachesCreator {
     public Coaches createCoaches() {
         while (true) {
             try {
-                String[] coachesName = inputCoachesName();
+                NameDTO coachesName = inputCoachesName();
                 List<Coach> coaches = createCoachesWithName(coachesName);
                 return new Coaches(coaches);
             } catch (CoachNameException e) {
@@ -36,9 +39,9 @@ public class CoachesCreator {
         }
     }
 
-    private List<Coach> createCoachesWithName(String[] coachesName) {
+    private List<Coach> createCoachesWithName(NameDTO coachesName) {
         List<Coach> coaches = new ArrayList<>();
-        for (String coachName : coachesName) {
+        for (String coachName : coachesName.name()) {
             coaches.add(createCoach(coachName));
         }
         return coaches;
@@ -64,7 +67,7 @@ public class CoachesCreator {
         outputView.printMessage(message);
     }
 
-    private String[] inputCoachesName() {
+    private NameDTO inputCoachesName() {
         return inputView.getCoachesName();
     }
 }

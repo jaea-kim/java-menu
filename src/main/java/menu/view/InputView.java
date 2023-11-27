@@ -1,16 +1,23 @@
-package menu;
+package menu.view;
 
 import camp.nextstep.edu.missionutils.Console;
+import menu.config.ApplicationMessage;
+import menu.dto.NameDTO;
 
+import java.util.Arrays;
 import java.util.Optional;
 
 public class InputView {
     private static final String DELIMITER = ",";
 
-    public String[] getCoachesName() {
+    public NameDTO getCoachesName() {
         System.out.println(ApplicationMessage.INPUT_COACHES_NAME.getMessage());
         String input = Console.readLine();
-        return input.split(DELIMITER);
+        return inputToNameDTO(input);
+    }
+
+    private NameDTO inputToNameDTO(String input) {
+        return new NameDTO(Arrays.asList(input.split(DELIMITER)));
     }
 
     public Optional<String[]> getCoachDislikeMenus(String coachName) {
