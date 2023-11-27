@@ -2,9 +2,9 @@ package menu.dto;
 
 import java.util.List;
 
-public record ResultDTO(String name, List<String> menus) {
-    public ResultDTO(String name, List<String> menus) {
+public record ResultDTO(String name, String menu) {
+    public ResultDTO(String name, String menu) {
         this.name = name;
-        this.menus = menus;
+        this.menu = menu;
     }
 }

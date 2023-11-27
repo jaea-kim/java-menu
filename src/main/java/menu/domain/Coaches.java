@@ -23,11 +23,10 @@ public class Coaches {
         }
     }
 
-    public RecommendResult recommendMenusWithCategory(EnumMap<Weekend, Category> selectedCategory) {
-        RecommendResult recommendResult = new RecommendResult();
+    public RecommendResult recommendMenusWithCategory(Category category, RecommendResult recommendResult) {
         for (Coach coach : coaches) {
-            ResultDTO resultDTO = coach.recommendMenusWithCategory(selectedCategory);
-            recommendResult.addResult(resultDTO.name(), resultDTO.menus());
+            ResultDTO resultDTO = coach.recommendMenusWithCategory(category, recommendResult);
+            recommendResult.addResult(resultDTO.name(), resultDTO.menu());
         }
         return recommendResult;
     }

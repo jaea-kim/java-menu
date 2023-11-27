@@ -1,6 +1,7 @@
 package menu.domain;
 
 import camp.nextstep.edu.missionutils.Randoms;
+import menu.RecommendResult;
 import menu.config.ErrorMessage;
 import menu.config.Weekend;
 import menu.dto.ResultDTO;
@@ -26,14 +27,10 @@ public class Coach {
         }
     }
 
-    public ResultDTO recommendMenusWithCategory(EnumMap<Weekend, Category> selectedCategory) {
-        List<String> menus = new ArrayList<>();
+    public ResultDTO recommendMenusWithCategory(Category category, RecommendResult recommendResult) {
+        String menu = recommendMenu(recommendResult.getCoachMenus(name), category);
 
-        for (Category category : selectedCategory.values()) {
-            menus.add(recommendMenu(menus, category));
-        }
-
-        return new ResultDTO(name, menus);
+        return new ResultDTO(name, menu);
     }
 
     private String recommendMenu(List<String> recommend, Category category) {

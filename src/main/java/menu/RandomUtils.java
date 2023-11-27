@@ -7,18 +7,12 @@ import menu.domain.Category;
 import java.util.EnumMap;
 
 public class RandomUtils {
-    public static EnumMap<Weekend, Category> pickWeekendCategory() {
-        EnumMap<Weekend, Category> randomCategory = new EnumMap<>(Weekend.class);
-
-        int order = 0;
-        for (Weekend weekend : Weekend.values()) {
+    public static Category pickWeekendCategory(EnumMap<Weekend, Category> randomCategory) {
+        int order = Randoms.pickNumberInRange(1, 5);
+        while (getNumberOfCategory(randomCategory, Category.of(order)) > 1) {
             order = Randoms.pickNumberInRange(1, 5);
-            while (getNumberOfCategory(randomCategory, Category.of(order)) > 1) {
-                order = Randoms.pickNumberInRange(1, 5);
-            }
-            randomCategory.put(weekend, Category.of(order));
         }
-        return randomCategory;
+        return Category.of(order);
     }
 
     private static int getNumberOfCategory(EnumMap<Weekend, Category> selectedCategory, Category category) {
