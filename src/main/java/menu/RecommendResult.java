@@ -18,7 +18,12 @@ public class RecommendResult {
         return results;
     }
 
-    public List<String> getCoachMenus(String name) {
+    public boolean contains(String name, String menu) {
+        List<String> menus = getCoachMenus(name);
+        return menus.contains(menu);
+    }
+
+    private List<String> getCoachMenus(String name) {
         return results.getOrDefault(name, new ArrayList<>());
     }
 }

@@ -25,16 +25,10 @@ public class Coach {
     }
 
     public ResultDTO recommendMenusWithCategory(Category category, RecommendResult recommendResult) {
-        String menu = recommendMenu(recommendResult.getCoachMenus(name), category);
-
-        return new ResultDTO(name, menu);
-    }
-
-    private String recommendMenu(List<String> recommend, Category category) {
         while (true) {
             String menu = Randoms.shuffle(category.getMenus()).get(0);
-            if (!recommend.contains(menu) && !dislikeMenus.contains(menu)) {
-                return menu;
+            if (!recommendResult.contains(name,menu) && !dislikeMenus.contains(menu)) {
+                return new ResultDTO(name, menu);
             }
         }
     }
