@@ -1,4 +1,4 @@
-package menu;
+package menu.config;
 
 public enum ErrorMessage {
     INCORRECT_COACH_NUMBER("코치 인원 수가 잘못 입력되었습니다."),

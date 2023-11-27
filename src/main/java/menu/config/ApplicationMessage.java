@@ -1,4 +1,4 @@
-package menu;
+package menu.config;
 
 public enum ApplicationMessage {
     START("점심 메뉴 추천을 시작합니다."),

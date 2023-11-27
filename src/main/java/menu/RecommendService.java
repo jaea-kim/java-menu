@@ -1,5 +1,9 @@
 package menu;
 
+import menu.config.Weekend;
+import menu.domain.Category;
+import menu.domain.Coaches;
+
 import java.util.EnumMap;
 
 public class RecommendService {

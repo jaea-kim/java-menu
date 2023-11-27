@@ -1,5 +1,6 @@
-package menu;
+package menu.domain;
 
+import menu.config.ErrorMessage;
 import menu.exception.CoachDislikeMenuException;
 
 import java.util.Collections;

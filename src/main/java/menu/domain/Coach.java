@@ -1,6 +1,9 @@
-package menu;
+package menu.domain;
 
 import camp.nextstep.edu.missionutils.Randoms;
+import menu.config.ErrorMessage;
+import menu.config.Weekend;
+import menu.dto.ResultDTO;
 import menu.exception.CoachNameException;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package menu;
+package menu.config;
 
 public enum Weekend {
     Monday("월요일"),

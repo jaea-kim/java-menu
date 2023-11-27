@@ -1,7 +1,10 @@
 package menu;
 
+import menu.config.Weekend;
+import menu.domain.Category;
+import menu.view.OutputView;
+
 import java.util.EnumMap;
-import java.util.Map;
 
 public class RecommendController {
     private RecommendService recommendService;

@@ -1,6 +1,8 @@
 package menu;
 
 import camp.nextstep.edu.missionutils.Randoms;
+import menu.config.Weekend;
+import menu.domain.Category;
 
 import java.util.EnumMap;
 
