@@ -7,8 +7,8 @@ import menu.view.OutputView;
 import java.util.EnumMap;
 
 public class RecommendController {
-    private RecommendService recommendService;
-    private OutputView outputView;
+    private final RecommendService recommendService;
+    private final OutputView outputView;
 
     public RecommendController(RecommendService recommendService, OutputView outputView) {
         this.recommendService = recommendService;

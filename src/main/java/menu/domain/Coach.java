@@ -3,12 +3,9 @@ package menu.domain;
 import camp.nextstep.edu.missionutils.Randoms;
 import menu.RecommendResult;
 import menu.config.ErrorMessage;
-import menu.config.Weekend;
 import menu.dto.ResultDTO;
 import menu.exception.CoachNameException;
 
-import java.util.ArrayList;
-import java.util.EnumMap;
 import java.util.List;
 
 public class Coach {

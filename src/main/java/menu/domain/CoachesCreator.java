@@ -12,8 +12,8 @@ import java.util.Optional;
 
 public class CoachesCreator {
     private static CoachesCreator instance;
-    private InputView inputView;
-    private OutputView outputView;
+    private final InputView inputView;
+    private final OutputView outputView;
 
     private CoachesCreator(InputView inputView, OutputView outputView) {
         this.inputView = inputView;

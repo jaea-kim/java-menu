@@ -1,12 +1,10 @@
 package menu.domain;
 
-import menu.*;
+import menu.RecommendResult;
 import menu.config.ErrorMessage;
-import menu.config.Weekend;
 import menu.dto.ResultDTO;
 import menu.exception.CoachNameException;
 
-import java.util.EnumMap;
 import java.util.List;
 
 public class Coaches {

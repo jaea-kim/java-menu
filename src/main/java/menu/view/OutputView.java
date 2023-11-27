@@ -1,8 +1,8 @@
 package menu.view;
 
 import menu.RecommendResult;
-import menu.config.Weekend;
 import menu.config.ApplicationMessage;
+import menu.config.Weekend;
 import menu.domain.Category;
 
 import java.util.EnumMap;
