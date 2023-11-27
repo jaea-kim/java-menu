@@ -21,6 +21,7 @@ public class OutputView {
             List<String> menus = entry.getValue();
             System.out.printf(RESULT_FORMAT, entry.getKey(), menus.get(0), menus.get(1), menus.get(2), menus.get(3), menus.get(4));
         }
+        System.out.println(ApplicationMessage.END.getMessage());
     }
 
 
