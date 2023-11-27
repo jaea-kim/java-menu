@@ -1,6 +1,6 @@
 package menu.view;
 
-import menu.RecommendResult;
+import menu.service.RecommendResult;
 import menu.config.ApplicationMessage;
 import menu.config.Weekend;
 import menu.domain.Category;

@@ -1,4 +1,4 @@
-package menu;
+package menu.service;
 
 import java.util.ArrayList;
 import java.util.HashMap;

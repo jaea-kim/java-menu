@@ -1,4 +1,4 @@
-package menu;
+package menu.util;
 
 import camp.nextstep.edu.missionutils.Randoms;
 import menu.config.Weekend;

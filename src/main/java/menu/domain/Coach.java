@@ -1,12 +1,10 @@
 package menu.domain;
 
 import camp.nextstep.edu.missionutils.Randoms;
-import menu.RecommendResult;
+import menu.service.RecommendResult;
 import menu.config.ErrorMessage;
 import menu.dto.ResultDTO;
 import menu.exception.CoachNameException;
-
-import java.util.List;
 
 public class Coach {
     private final String name;

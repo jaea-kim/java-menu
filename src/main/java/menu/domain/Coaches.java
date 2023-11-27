@@ -1,6 +1,6 @@
 package menu.domain;
 
-import menu.RecommendResult;
+import menu.service.RecommendResult;
 import menu.config.ErrorMessage;
 import menu.dto.ResultDTO;
 import menu.exception.CoachNameException;

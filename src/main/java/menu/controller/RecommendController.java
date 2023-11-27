@@ -1,5 +1,8 @@
-package menu;
+package menu.controller;
 
+import menu.util.RandomUtils;
+import menu.service.RecommendResult;
+import menu.service.RecommendService;
 import menu.config.Weekend;
 import menu.domain.Category;
 import menu.view.OutputView;

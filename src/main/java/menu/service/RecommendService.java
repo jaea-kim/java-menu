@@ -1,4 +1,4 @@
-package menu;
+package menu.service;
 
 import menu.domain.Category;
 import menu.domain.Coaches;
